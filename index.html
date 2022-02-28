@@ -7,6 +7,8 @@
    <link rel="preconnect" href="https://fonts.googleapis.com">
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+   <!-- swiper -->
+   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
    <!-- style -->
    <link rel="stylesheet" href="style.css">
    <!-- icons -->
@@ -88,14 +90,75 @@
             </div>
          </div>
       </section>
-
       <div class="divider"></div>
 
-      <section id="testimonials"></section>
-
+      <section class="section" id="testimonials">
+         <div class="container">
+            <header>
+               <h2 class="title">Depoimentos de quem já passou por aqui</h2>
+            </header>
+            <div class="testimonials swiper">
+               <div class="swiper-wrapper">
+                  <div class="testimonial swiper-slide">
+                     <blockquote>
+                        <p><span>&ldquo;</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda quis, quod ea iste aut maiores sed officiis doloremque, hic impedit id excepturi, eos laborum unde accusamus ipsa quas? Itaque.
+                        </p>
+                        <cite>
+                           <img src="./assets/fotos/89.jpg" alt="">
+                           Suely Wendich
+                        </cite>
+                     </blockquote>
+                  </div>
+   
+                  <div class="testimonial swiper-slide">
+                     <blockquote>
+                        <p><span>&ldquo;</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda quis, quod ea iste aut maiores sed officiis doloremque, hic impedit id excepturi, eos laborum unde accusamus ipsa quas? Itaque.
+                        </p>
+                        <cite>
+                           <img src="./assets/fotos/90.jpg" alt="">
+                           Natali Cristofolli Wendich
+                        </cite>
+                     </blockquote>
+                  </div>
+   
+                  <div class="testimonial swiper-slide">
+                     <blockquote>           
+                        <p><span>&ldquo;</span>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam assumenda quis, quod ea iste aut maiores sed officiis doloremque, hic impedit id excepturi, eos laborum unde accusamus ipsa quas? Itaque.
+                        </p>
+                        <cite>
+                           <img src="./assets/fotos/38.jpg" alt="">
+                           Gabriel Cristofolli Wendich
+                        </cite>
+                     </blockquote>
+                  </div>
+               </div>
+               <div class="swiper-pagination"></div>
+            </div>
+         </div>
+      </section>
       <div class="divider-2"></div>
 
-      <section id="contact"></section>
+      <section class="section" id="contact">
+         <div class="container grid">
+            <div class="text">
+               <h2 class="title">Entre em contato com a gente!</h2>
+               <p>Entre em contato com a Beautysalon, queremos tirar suas dúvidas, ouvir suas críticas e sugestões.</p>
+               <a href="" class="button"><i class="icon-whatsapp"></i>Entrar em contato</a>
+            </div>
+            <div class="links">
+               <ul>
+                  <li><i class="icon-phone"></i></li>
+                  <li><i class="icon-map-pin"></i></li>
+                  <li><i class="icon-mail"></i></li>
+               </ul>
+            </div>
+         </div>
+      </section>
+      <div class="divider"></div>
+      
    </main>
 
    <footer>
@@ -119,6 +182,9 @@
       </div>
    </footer>
 
+   <!-- swiper -->
+   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+   <!-- main script -->
    <script src="script.js"></script>
 </body>
 </html>

@@ -331,6 +331,79 @@ nav.show .menu ul {
 
 
 
+#testimonials {
+   background-color: #FFF;
+}
+
+#testimonials .container {
+   margin: 0;
+}
+
+#testimonials .container header {
+   margin: 0 2.4rem;
+}
+
+#testimonials blockquote {
+   padding: 3.2rem;
+   display: grid;
+   gap: 2.4rem;
+   box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.08);
+   border-radius: .4rem;
+}
+
+#testimonials blockquote p {
+   font-size: 1.6rem;
+   position: relative;
+   text-indent: 2.5rem;
+   line-height: 2.6rem;
+}
+
+#testimonials blockquote p span {
+   font: 400 4.8rem "Georgia", serif;
+   color: var(--base-color);
+   position: absolute;
+   top: -.7rem;
+   left: -2.5rem;
+}
+
+#testimonials blockquote cite {
+   display: flex;
+   align-items: center;
+   gap: .8rem;
+
+   font-size: 1.6rem;
+   color: var(--text-color);
+}
+
+#testimonials blockquote cite img {
+   width: 3.2rem;
+   object-fit: cover;
+   clip-path: circle();
+}
+
+
+.swiper-slide {
+   height: auto;
+   padding: 4rem 2.4rem;
+}
+.swiper-pagination-bullet-active {
+   background-color: var(--base-color);
+}
+
+
+
+
+#contact .text p {
+   color: var(--text-color);
+   margin-bottom: 3.2rem;
+}
+
+#contact .text .button i {
+   font-size: 2.4rem;
+   margin-right: 1rem;
+}
+
+
 footer {
    height: 29.4rem;
    background-color: var(--base-color);
