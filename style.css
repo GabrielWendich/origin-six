@@ -1,0 +1,352 @@
+* {
+   margin: 0;
+   padding: 0;
+   text-decoration: none;
+   box-sizing: border-box;
+   list-style: none;
+
+   font: 400 1.6rem "DM Sans", sans-serif;
+}
+
+:root {
+   /* font-size default - 10px */
+   font-size: 62.5%;
+  /* colors - hue = matiz*/
+  --hue: 159;
+  /* HSL color mode */
+  --base-color: hsl(var(--hue) 36% 57%);
+  --base-color-second: hsl(var(--hue) 65% 88%);
+  --base-color-alt: hsl(var(--hue) 57% 53%);
+  --title-color: hsl(var(--hue) 41% 10%);
+  --text-color: hsl(0 0% 46%);
+  --text-color-light: hsl(0 0% 98%);
+  --body-color: hsl(0 0% 98%);
+  --divider: hsla(0, 0%, 89%, 1);
+  --divider-alt: linear-gradient(270deg, --base-color 0%, --base-color-second 100%);
+  
+}
+html {
+   scroll-behavior: smooth;
+}
+a {
+   display: inline-flex;
+}
+img {
+   width: 100%;
+   height: auto;
+}
+
+.grid {
+   display: grid;
+   gap: 3.2rem;
+}
+
+.container {
+   margin: 0 2.4rem;
+}
+
+.logo, 
+.logo span, 
+.logo-alt, 
+.logo-alt span{
+   font: 700 2.1rem "Poppins", sans-serif;
+}
+.logo, .logo-alt {
+   color: var(--title-color);
+}
+.logo span {
+   color: var(--base-color);
+}
+.logo-alt span {
+   color: var(--body-color);
+}
+
+.divider {
+   height: 1px;
+   background: linear-gradient(
+      270deg, 
+      hsl(var(--hue), 36%, 57%), 
+      hsla(var(--hue), 65%, 88%, 0.34)
+   );
+}
+.divider-2 {
+   height: 1px;
+   background: linear-gradient(
+      270deg, 
+      hsla(var(--hue), 65%, 88%, 0.34),
+      hsl(var(--hue), 36%, 57%)
+   );
+}
+
+.button {
+   width: 21.4rem;
+   height: 5.6rem;
+   font: 500 1.6rem "DM Sans", sans-serif;
+   color: var(--text-color-light);
+   background-color: var(--base-color);
+   border-radius: .4rem;
+   align-items: center;
+   justify-content: center;
+   /* transition only for background */
+   transition: background .3s;
+}
+.button:hover {
+   background-color: var(--base-color-alt);
+}
+
+.title {
+   font: 700 3rem "Poppins", sans-serif;
+   color: var(--title-color);
+}
+
+.section {
+   padding: 8rem 0;
+}
+.section .title {
+   margin-bottom: 1.6rem;
+}
+.section header {
+   margin-bottom: 3.2rem;
+}
+
+
+#header {
+   height: 7.2rem;
+   width: 100%;
+   background-color: var(--body-color);
+   border-bottom: solid 1px var(--divider);
+   
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 100;
+
+   transition: .3s;
+}
+#header.scroll {
+   box-shadow: 0 0 1.2rem hsla(0, 0%, 0%, 0.2);
+}
+nav {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+nav .menu {
+   /* opacity: 0; */
+   visibility: hidden;
+   top: -20rem;
+   transition: .2s;
+}
+nav .menu ul a {
+   transition: color .3s;
+   position: relative;
+}
+nav .menu ul a:hover {
+   color: var(--base-color);
+}
+nav .menu ul a::after {
+   content: "";
+   width: 0%;
+   height: 2px;
+   background: var(--base-color);
+   
+   position: absolute;
+   bottom: -2.4rem;
+   left: 0;
+
+   transition: width .2s;
+}
+nav .menu ul a:hover::after {
+   width: 100%;
+}
+nav.show .menu ul.grid {
+   text-align: center;
+   gap: 6.4rem;
+}
+nav.show .menu {
+   /* opacity: 1; */
+   visibility: visible;
+
+   height: 100vh;
+   width: 100vw;
+   position: absolute;
+   top: 0;
+   left: 0;
+   background-color: var(--body-color);
+
+   display: grid;
+   place-content: center;
+}
+nav .icon-close {
+   visibility: hidden;
+
+   position: absolute;
+   top: 0;
+   right: 2.4rem;
+
+   transition: .15s;
+}
+.toggle {
+   color: var(--base-color);
+   font-size: 2.4rem;
+   cursor: pointer;
+}
+nav.show div.icon-close {
+   visibility: visible;
+   top: 2.4rem;
+}
+/* para que as transições fiquem flúidas */
+nav .menu ul {
+   display: none;
+}
+nav.show .menu ul {
+   display: grid;
+}
+
+
+
+
+#home {
+   background-color: var(--body-color);
+   padding-top: 14.5rem;
+   overflow: hidden;
+}
+#home .container {
+   margin: 0;
+}
+#home .image {
+   position: relative;
+}
+#home .image::before {
+   content: '';
+   height: 100%;
+   width: 100%;
+   background-color: var(--base-color-second);
+   position: absolute;
+   top: -16.8%;
+   right: -16.7%;
+   z-index: 0;
+}
+#home img {
+   position: relative;
+   right: 4.7rem;
+}
+#home .text {
+   margin: 0 2.4rem;
+   text-align: center;
+}
+#home h2 {
+   font: 700 3rem "Poppins", sans-serif;
+   color: var(--title-color);
+   margin-bottom: 1.6rem;
+
+   -webkit-font-smoothing: auto;
+}
+#home p {
+   font: 400 1.6rem "DM Sans", sans-serif;
+   color: var(--text-color);
+   margin-bottom: 3.2rem;
+}
+
+
+
+
+#about {
+   background-color: #FFF;
+}
+#about .container {
+   margin: 0;
+}
+#about .image {
+   position: relative;
+}
+#about .image::before {
+   content: '';
+   height: 100%;
+   width: 100%;
+   background-color: var(--base-color-second);
+   position: absolute;
+   top: -8.25%;
+   left: -31.11%;
+   z-index: 0;
+}
+#about img {
+   position: relative;
+}
+#about .text {
+   margin: 0 2.4rem;
+   text-align: start;
+}
+#about h2 {
+   font: 700 3rem "Poppins", sans-serif;
+   color: var(--title-color);
+   margin-bottom: 1.6rem;
+
+   -webkit-font-smoothing: auto;
+}
+#about p {
+   font: 400 1.6rem "DM Sans", sans-serif;
+   color: var(--text-color);
+   line-height: 2.6rem;
+}
+
+
+
+
+#services {
+   background-color: var(--body-color);
+}
+#services header p strong {
+   color: var(--base-color);
+   font-weight: bold;
+}
+.cards.grid {
+   gap: 2.4rem;
+}
+.card {
+   padding: 5.8rem 3.2rem;
+   box-shadow: 0px 0px 12px hsla(0, 0%, 0%, 0.08);
+   border-bottom: .4rem solid var(--base-color);
+   border-radius: .4rem .4rem 0 0;
+   text-align: center;
+}
+.card i {
+   /* i é uma tag usada para icones */
+   display: block;
+   margin-bottom: 2.4rem;
+   /* os icones foram transformados em fontes */
+   font-size: 8rem;
+   color: var(--base-color);
+}
+.card .title {
+   font-size: 2.4rem;
+   margin-bottom: 1.2rem;
+}
+.card p {
+   color: var(--text-color);
+   line-height: 2.6rem;
+}
+
+
+
+
+footer {
+   height: 29.4rem;
+   background-color: var(--base-color);
+   padding: 6.4rem 0;
+}
+footer .text {
+   color: var(--text-color-light);
+   font: 400 1.6rem "DM Sans", sans-serif;
+   margin: 2.4rem 0 3.2rem;
+}
+footer #social {
+   display: flex;
+   gap: 3.2rem;
+}
+footer #social i {
+   display: block;
+   font-size: 2.4rem;
+   color: var(--text-color-light);
+}
