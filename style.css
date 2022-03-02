@@ -24,6 +24,9 @@
   --divider: hsla(0, 0%, 89%, 1);
   --divider-alt: linear-gradient(270deg, --base-color 0%, --base-color-second 100%);
   
+  /* responsive */
+  --title-font-size: 3rem;
+  --subtitle-font-size: 1.6rem;
 }
 html {
    scroll-behavior: smooth;
@@ -95,7 +98,7 @@ img {
 }
 
 .title {
-   font: 700 3rem "Poppins", sans-serif;
+   font: 700 var(--title-font-size) "Poppins", sans-serif;
    color: var(--title-color);
 }
 
@@ -104,6 +107,9 @@ img {
 }
 .section .title {
    margin-bottom: 1.6rem;
+}
+.section .subtitle{
+   font-size: var(--subtitle-font-size);
 }
 .section header {
    margin-bottom: 3.2rem;
@@ -392,6 +398,9 @@ nav.show .menu ul {
 
 
 
+#contact {
+   background-color: var(--body-color);
+}
 
 #contact .text p {
    color: var(--text-color);
@@ -402,6 +411,21 @@ nav.show .menu ul {
    font-size: 2.4rem;
    margin-right: 1rem;
 }
+#contact div.grid {
+   gap: 6.4rem;
+}
+#contact .links ul li {
+   display: flex;
+   align-items: center;
+   color: var(--text-color);
+}
+
+#contact .links ul li i {
+   font-size: 2.4rem;
+   color: var(--base-color);
+   margin-right: 1.2rem;
+}
+
 
 
 footer {
@@ -412,7 +436,13 @@ footer {
 footer .text {
    color: var(--text-color-light);
    font: 400 1.6rem "DM Sans", sans-serif;
-   margin: 2.4rem 0 3.2rem;
+
+   display: grid;
+   gap: 1.2rem;
+   margin-bottom: 3.2rem;
+}
+footer .text a {
+   margin-bottom: 1.2rem;
 }
 footer #social {
    display: flex;
@@ -423,3 +453,53 @@ footer #social i {
    font-size: 2.4rem;
    color: var(--text-color-light);
 }
+footer #social a {
+   transition: .3s;
+   transform: translateY(0);
+}
+footer #social a:hover {
+   transform: translateY(-8px);
+}
+
+
+
+
+.back-to-top {
+   padding: .8rem;
+   font-size: 2.4rem;
+   background-color: var(--base-color);
+   color: var(--text-color-light);
+   clip-path: circle();
+
+   position: fixed;
+   bottom: 1rem;
+   right: 1rem;
+   z-index: 2;
+
+   visibility: hidden;
+   opacity: 0;
+
+   transition: .3s;
+   transform: translatey(100%);
+}
+.back-to-top.show {
+   visibility: visible;
+   opacity: 1;
+   transform: translatey(0%);
+}
+
+
+
+
+/* RESPONSIVE */
+/* extra large devices: 1200 */
+/* large devices: 1024 */
+/* large devices: 992 */
+@media (min-width: 992px) {
+   :root {
+      --title-font-size: 3.6rem;
+      --subtitle-font-size: 1.8rem;
+
+   }
+}
+/* medium devices: 767 */
